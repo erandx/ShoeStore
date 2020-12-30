@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">ShoeStore</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Login Screen -->
+    <string name="login_button">Log In</string>
+    <string name="sign_up_button">Sign Up</string>
+
+    <!-- Welcome Screen -->
+    <string name="instructions_fragment">WELCOME TO Shoe Store!</string>
+    <string name="welcome_shoe_text_info">Before you get started, please click the Instructions below to learn more about Shoe Store.</string>
+    <string name="shoe_image">Shoe Image</string>
+
+    <!-- Instruction Screen -->
+    <string name="instruction_button">Next</string>
+    <string name="instruction_text_head">Instructions</string>
+    <string name="instruction_text">Thank you for Signing Up.
+        Please follow the instructions bellow to Add a new shoe to the List. "\n" 1. Click The add Button
+    \n 2. Fill up Shoe Details \n 3. Click Save to Add the Shoe to the List</string>
+
+    <!-- Listing Screen -->
+    <string name="logout_menu">Log Out</string>
+
+
+
+    <!-- Shoe Details Screen -->
+    <string name="cancel_button">Cancel</string>
+    <string name="add_shoe_button">Add Shoe</string>
+    <string name="shoe_name_details_text">Shoe Name</string>
+    <string name="shoe_name_list_item_text">Name</string>
+    <string name="shoe_size_details_text">Size</string>
+    <string name="shoe_company_details_text">Company Name</string>
+    <string name="shoe_detailed_details_text">Shoe Details</string>
+    <string name="shoe_detailed_details_edit_text">A shoe is an item of footwear intended to protect and comfort the human foot.
+        Shoes are also used as an item of decoration and fashion.
+        The design of shoes has varied enormously through time and from culture to culture,
+        with appearance originally being tied to function.</string>
+
+    <string name="save_shoe_details_button">Save</string>
+    <string name="brand_text_view">Brand</string>
+    <string name="password_text">Password</string>
+    <string name="e_mail_address">E-mail</string>
+</resources>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--    We use ConstraintLayout to help reduce the number of nested views -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:context=".fragments.">
+
+        <TextView
+            android:id="@+id/instructionsTextHead"
+            style="@style/FragmentsGeneralText"
+            android:fontFamily="@font/contrail_one"
+            android:gravity="center"
+            android:text="@string/instruction_text_head"
+            android:textSize="@dimen/text_size_xlarge"
+            app:layout_constraintBottom_toTopOf="@+id/instructionsTextInfo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/instructionsTextInfo"
+            style="@style/FragmentsGeneralText"
+            android:fontFamily="@font/contrail_one"
+            android:gravity="center"
+            android:lineSpacingMultiplier="1.3"
+            android:text="@string/instruction_text"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/text_size_large"
+            app:layout_constraintBottom_toTopOf="@+id/nextButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/instructionsTextHead" />
+
+        <Button
+            android:id="@+id/nextButton"
+            style="@style/ButtonLogin"
+            android:layout_gravity="center|bottom"
+            android:layout_marginBottom="@dimen/button_padding"
+            android:text="@string/instruction_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/instructionsTextInfo" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

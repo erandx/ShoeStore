@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragments.WelcomeFragment">
+
+    <!--    We use ConstraintLayout to help reduce the number of nested views -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/welcomeShoeTextThanks"
+            style="@style/FragmentsGeneralText"
+            android:fontFamily="@font/contrail_one"
+            android:gravity="center"
+            android:text="@string/instructions_fragment"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/text_size_xlarge"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/welcomeShoeTextInfo"
+            style="@style/FragmentsGeneralText"
+            android:fontFamily="@font/contrail_one"
+            android:gravity="center"
+            android:text="@string/welcome_shoe_text_info"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintBottom_toTopOf="@+id/welcomeButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/welcomeShoeTextThanks" />
+
+        <Button
+            android:id="@+id/welcomeButton"
+            style="@style/ButtonLogin"
+            android:layout_marginStart="@dimen/button_padding"
+            android:layout_marginEnd="@dimen/button_padding"
+            android:layout_marginBottom="@dimen/button_padding"
+            android:background="@drawable/btn_style"
+            android:text="@string/instruction_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/welcomeShoeTextInfo" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/shoe_image"
+            android:src="@drawable/ic_running_shoes"
+            app:layout_constraintBottom_toTopOf="@+id/welcomeShoeTextThanks"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

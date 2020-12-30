@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.udacity.shoestore.navigation.LoginFragment">
+
+    <!--    We use ConstraintLayout to help reduce the number of nested views -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/loginConstraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/logInButton"
+            style="@style/ButtonLogin"
+            android:paddingStart="@dimen/button_padding"
+            android:paddingEnd="@dimen/button_padding"
+            android:text="@string/login_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/signUp"
+            app:layout_constraintTop_toBottomOf="@id/editTextPassword" />
+
+        <Button
+            android:id="@+id/signUp"
+            style="@style/ButtonLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_up_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/logInButton"
+            app:layout_constraintStart_toStartOf="@+id/logInButton"
+            app:layout_constraintTop_toBottomOf="@+id/logInButton" />
+
+        <EditText
+            android:id="@+id/editTextUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/e_mail_address"
+            android:inputType="textEmailAddress"
+            app:layout_constraintBottom_toTopOf="@id/editTextPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logInImage"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/password_text"
+            android:inputType="textPassword"
+            app:layout_constraintTop_toBottomOf="@id/editTextUserName"
+            app:layout_constraintBottom_toTopOf="@+id/logInButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/logInImage"
+            style="@style/FragmentsGeneralText"
+            android:gravity="center"
+            android:src="@drawable/ic_running_shoes"
+            app:layout_constraintBottom_toTopOf="@+id/editTextUserName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

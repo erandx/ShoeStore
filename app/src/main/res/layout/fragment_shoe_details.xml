@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragments.ShoeDetailsFragment">
+
+    <data>
+
+        <variable
+            name="shoe"
+            type="com.udacity.shoestore.models.Shoe" />
+
+        <variable
+            name="listingViewModel"
+            type="com.udacity.shoestore.viewmodels.ListingViewModel" />
+    </data>
+
+    <!--Linear Layout used for Shoe Detail Item-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/FragmentsGeneralText"
+            android:gravity="center"
+            android:text="@string/add_shoe_button" />
+
+        <TextView
+            android:id="@+id/ShoeNameDetailsText"
+            style="@style/ShoeTextDetailsText"
+            android:text="@string/shoe_name_details_text" />
+
+        <EditText
+            android:id="@+id/ShoeNameDetailsEditText"
+            style="@style/ShoeTextDetailsText"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@{shoe.name}"
+            tools:hint="Shoe Name" />
+
+        <TextView
+            android:id="@+id/ShoeSizeDetailsText"
+            style="@style/ShoeTextDetailsText"
+            android:text="@string/shoe_size_details_text" />
+
+        <EditText
+            android:id="@+id/ShoeSizeDetailsEditText"
+            style="@style/ShoeTextDetailsText"
+            android:ems="10"
+            android:inputType="numberSigned"
+            android:text="@{Double.toString(shoe.size)}"
+            tools:hint="Shoe Size" />
+
+        <TextView
+            android:id="@+id/CompanyShoeDetailsText"
+            style="@style/ShoeTextDetailsText"
+            android:text="@string/shoe_company_details_text" />
+
+        <EditText
+            android:id="@+id/CompanyShoeDetailsEditText"
+            style="@style/ShoeTextDetailsText"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@{shoe.company}"
+            tools:hint="Company Name" />
+
+        <TextView
+            android:id="@+id/DetailedShoeDetailsText"
+            style="@style/ShoeTextDetailsText"
+            android:text="@string/shoe_detailed_details_text" />
+
+        <EditText
+            android:id="@+id/DetailedShoeDetailsEditText"
+            style="@style/ShoeTextDetailsText"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@{shoe.description}"
+            tools:hint="Shoe Details" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/saveButton"
+                style="@style/ButtonLogin"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="18dp"
+                android:onClick="@{()-> listingViewModel.addShoe(shoe)}"
+                android:text="@string/save_shoe_details_button" />
+
+            <Button
+                android:id="@+id/cancelButton"
+                style="@style/ButtonLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="18dp"
+                android:text="@string/cancel_button" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</layout>
