@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--dimens to size text, buttons or margins and padding of our Views and layouts-->
     <dimen name="vertical_margin">16dp</dimen>
     <dimen name="horizontal_margin">8dp</dimen>
     <dimen name="button_padding">16dp</dimen>
+    <dimen name="padding_small_size">8dp</dimen>
     <dimen name="button_text_size">18sp</dimen>
     <dimen name="text_size_small">14sp</dimen>
     <dimen name="text_size_medium">18sp</dimen>
     <dimen name="text_size_large">24sp</dimen>
     <dimen name="text_size_xlarge">28sp</dimen>
     <dimen name="layout_margin_small">8dp</dimen>
+    <dimen name="layout_margin_xsmall">4dp</dimen>
 
 
 </resources>

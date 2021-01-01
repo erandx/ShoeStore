@@ -11,99 +11,112 @@
     </data>
 
     <LinearLayout
+        style="@style/CardView.Light"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginStart="@dimen/layout_margin_small"
-        android:layout_marginTop="@dimen/layout_margin_small"
-        android:layout_marginEnd="@dimen/layout_margin_small">
+        android:orientation="vertical">
 
-    <!--   Card View is suited for showcasing elements in a nice way-->
-    <!--    Used especially with Recycler View-->
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <!--    We use ConstraintLayout to help reduce the number of nested views -->
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
-
-            <TextView
-                android:id="@+id/BrandtextView"
-                style="@style/ListItemText"
-                android:layout_width="wrap_content"
+            <!--   Card View is suited for showcasing elements in a nice way-->
+            <!--    Used especially with Recycler View-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/brand_text_view"
-                app:layout_constraintBottom_toTopOf="@+id/BrandNametext"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:layout_margin="@dimen/layout_margin_xsmall"
+                app:cardCornerRadius="@dimen/cardview_default_radius"
+                app:cardElevation="@dimen/cardview_default_elevation">
 
-            <TextView
-                android:id="@+id/BrandNametext"
-                style="@style/ListItemLightText"
-                android:text="@{shoe.company}"
-                app:layout_constraintBaseline_toBaselineOf="@+id/ShoeNameText"
-                app:layout_constraintEnd_toStartOf="@+id/ShoeNameText"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/BrandtextView"
-                tools:text="@string/shoe_name_details_text" />
+                <!--    We use ConstraintLayout to help reduce the number of nested views -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/ShoeTextView"
-                style="@style/ListItemText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/shoe_name_list_item_text"
-                app:layout_constraintBaseline_toBaselineOf="@+id/BrandtextView"
-                app:layout_constraintEnd_toStartOf="@+id/ShoeSizeListItem"
-                app:layout_constraintStart_toEndOf="@+id/BrandtextView" />
+                    <TextView
+                        android:id="@+id/BrandtextView"
+                        style="@style/ListItemText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/padding_small_size"
+                        android:text="@string/brand_text_view"
+                        app:layout_constraintBottom_toTopOf="@+id/BrandNametext"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/ShoeNameText"
-                style="@style/ListItemLightText"
-                android:text="@{shoe.name}"
-                app:layout_constraintBottom_toTopOf="@id/ListItemDetails"
-                app:layout_constraintEnd_toStartOf="@+id/NrSizeListItem"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/ShoeTextView"
-                app:layout_constraintTop_toBottomOf="@+id/ShoeTextView"
-                tools:text="@string/shoe_name_details_text" />
+                    <TextView
+                        android:id="@+id/BrandNametext"
+                        style="@style/ListItemLightText"
+                        android:text="@{shoe.company}"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/ShoeNameText"
+                        app:layout_constraintEnd_toStartOf="@+id/ShoeNameText"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/BrandtextView"
+                        tools:text="@string/shoe_name_details_text" />
 
-            <TextView
-                android:id="@+id/NrSizeListItem"
-                style="@style/ListItemLightText"
-                android:importantForAutofill="no"
-                android:text="@{``+ shoe.size}"
-                app:layout_constraintBaseline_toBaselineOf="@+id/ShoeNameText"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/ShoeSizeListItem"
-                tools:text="@string/shoe_name_details_text" />
+                    <TextView
+                        android:id="@+id/ShoeTextView"
+                        style="@style/ListItemText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/shoe_name_list_item_text"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/BrandtextView"
+                        app:layout_constraintEnd_toStartOf="@+id/ShoeSizeListItem"
+                        app:layout_constraintStart_toEndOf="@+id/BrandtextView" />
 
-            <TextView
-                android:id="@+id/ShoeSizeListItem"
-                style="@style/ListItemText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/shoe_size_details_text"
-                app:layout_constraintBaseline_toBaselineOf="@+id/ShoeTextView"
-                app:layout_constraintEnd_toEndOf="parent" />
+                    <TextView
+                        android:id="@+id/ShoeNameText"
+                        style="@style/ListItemLightText"
+                        android:text="@{shoe.name}"
+                        app:layout_constraintBottom_toTopOf="@id/ListItemDetailsInfo"
+                        app:layout_constraintEnd_toStartOf="@+id/NrSizeListItem"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/ShoeTextView"
+                        app:layout_constraintTop_toBottomOf="@+id/ShoeTextView"
+                        tools:text="@string/shoe_name_details_text" />
 
-            <TextView
-                android:id="@+id/ListItemDetails"
-                style="@style/ShoeTextDetailsText"
-                android:layout_margin="@dimen/text_size_medium"
-                android:text="@{shoe.description}"
-                tools:text="@string/shoe_detailed_details_edit_text"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ShoeNameText" />
+                    <TextView
+                        android:id="@+id/NrSizeListItem"
+                        style="@style/ListItemLightText"
+                        android:importantForAutofill="no"
+                        android:text="@{``+ shoe.size}"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/ShoeNameText"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/ShoeSizeListItem"
+                        tools:text="@string/shoe_name_details_text" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:id="@+id/ShoeSizeListItem"
+                        style="@style/ListItemText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/shoe_size_details_text"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/ShoeTextView"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/ListItemDetails"
+                        style="@style/ListItemText"
+                        android:text="@string/details_text"
+                        app:layout_constraintBottom_toTopOf="@+id/ListItemDetailsInfo"
+                        app:layout_constraintStart_toStartOf="@id/BrandNametext"
+                        app:layout_constraintTop_toBottomOf="@+id/BrandNametext" />
+
+                    <TextView
+                        android:id="@+id/ListItemDetailsInfo"
+                        style="@style/ListItemLightText"
+                        android:layout_margin="@dimen/text_size_medium"
+                        android:text="@{shoe.description}"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/ListItemDetails"
+                        tools:text="@string/shoe_detailed_details_edit_text" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+        </FrameLayout>
 
     </LinearLayout>
 </layout>

@@ -40,4 +40,5 @@
     <string name="brand_text_view">Brand</string>
     <string name="password_text">Password</string>
     <string name="e_mail_address">E-mail</string>
+    <string name="details_text">Details</string>
 </resources>

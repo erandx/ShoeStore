@@ -27,6 +27,7 @@ class ListingFragment : Fragment() {
     //View Model
     private lateinit var ViewModel: ListingViewModel
 
+    //data binding
     private lateinit var binding: FragmentListingBinding
 
 
