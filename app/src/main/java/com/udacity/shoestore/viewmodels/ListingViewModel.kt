@@ -28,11 +28,9 @@ class ListingViewModel : ViewModel() {
     }
 
     //creating our Shoe List
-//    private var listOfShoe: MutableList<Shoe> = mutableListOf()
 
     init {
         listOfShoes()
-//        _shoeList.value = ArrayList()
         __eventShoeList.value = false
     }
 
